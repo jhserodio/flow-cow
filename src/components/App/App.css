@@ -1,0 +1,39 @@
+
+.app {
+  --template-height: 40px;
+  --content-height: calc(100vh - (var(--template-height) * 2));
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: #bbb;
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "form list"
+    "footer footer";
+}
+
+.header {
+  background: #222;
+  color: white;
+  height: var(--template-height);
+  font-weight: bold;
+  grid-area: header;
+}
+
+.form {
+  height: var(--content-height);
+  grid-area: form;
+  background: red;
+}
+
+.list {
+  height: var(--content-height);
+  grid-area: list;
+  background: blue;
+}
+
+.footer {
+  height: var(--template-height);
+  grid-area: footer;
+  background: yellow;
+}
