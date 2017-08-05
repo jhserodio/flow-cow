@@ -1,0 +1,19 @@
+.cowHeader {
+    background: var(--prime);
+    padding: 0 10%;
+    display: flex;
+    box-shadow: 2px 0 3px 1px var(--fourt);
+}
+
+.cowHeader h1 {
+    font-size: var(--head);
+    margin: 0 var(--space-large);
+    color: var(--fourt);
+    line-height: var(--template-height);
+}
+
+.cowHeader svg {
+    fill: var(--fourt);
+    width: 56px;
+    height: var(--template-height);
+}

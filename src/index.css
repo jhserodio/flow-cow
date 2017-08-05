@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+:root {
+  --template-height: 60px;
+  --content-height: calc(100vh - (var(--template-height) * 2));
+  /* measures */
+  --space-base: 8px;
+  --space-large: 25px;
+  --space-small: 3px;
+  /* colors */
+  --prime: #ff7473;
+  --second: #ffc952;
+  --third: #47b8e0;
+  --fourt: #34314c;
+  
+  --text: 18px;
+  --head: 32px;
+  --span: 16px
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Quicksand;
 }

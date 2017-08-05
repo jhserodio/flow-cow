@@ -1,39 +1,29 @@
 
 .app {
-  --template-height: 40px;
-  --content-height: calc(100vh - (var(--template-height) * 2));
   display: grid;
-  grid-template-columns: 50% 50%;
-  background: #bbb;
+  grid-template-columns: 100%;
   height: 100vh;
   grid-template-areas:
-    "header header"
-    "form list"
-    "footer footer";
+    "header"
+    "content"
+    "footer";
 }
 
-.header {
-  background: #222;
-  color: white;
+.app ._header {
   height: var(--template-height);
-  font-weight: bold;
   grid-area: header;
 }
 
-.form {
-  height: var(--content-height);
-  grid-area: form;
-  background: red;
+.app ._content {
+  height: calc(var(--content-height));
+  grid-area: content;
+  width: 80%;
+  padding: calc(var(--space-large)*2) 0;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-.list {
-  height: var(--content-height);
-  grid-area: list;
-  background: blue;
-}
-
-.footer {
+.app ._footer {
   height: var(--template-height);
   grid-area: footer;
-  background: yellow;
 }

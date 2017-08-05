@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
+import FormContainer from '../Form/FormContainer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <header className="header">
-          flow type
-        </header>
-        <div className="form">
-          form
+        <Header className="_header"/>
+        <div className="_content">
+          <FormContainer />
+          <div>
+            list
+          </div>
         </div>
-        <div className="list">
-          lista
-        </div>
-        <footer className="footer">
-          footer
-        </footer>
+        <Footer  className="_footer" />
       </div>
     );
   }
