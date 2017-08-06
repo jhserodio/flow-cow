@@ -1,14 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCow } from '../../actions/cows';
 import Form from './Form';
 
-const FormContainer = props => <Form />;
+class FormContainer extends Component {
 
-const mapDispatchToProps = dispatch => ({
-    addCow: cow => {
-        dispatch(addCow(cow))
+    state = {
+        name: undefined,
+        born: undefined,
+        weight: undefined,
+        sex: undefined,
+        race: undefined
     }
-});
 
-export default connect(mapDispatchToProps)(FormContainer)
+    handleChangeState = (e, state) =>
+        this.setState({
+            [state]: e.target.value
+        })
+
+    saveTheCow = () => {
+        const { name, born, weight, sex, race } = this.state;
+        if (name && born && weight && sex && race) {
+            this.props.addCow(this.state)
+        } else {
+            alert('tem coisa faltando');
+        }
+    }
+
+    render() {
+        return (
+            <Form
+                {...this.state}
+                changeState={this.handleChangeState}
+                save={this.saveTheCow}
+                />
+        )
+    }
+}
+
+const mapDispatchToProps = { addCow }
+
+export default connect(undefined, mapDispatchToProps)(FormContainer)

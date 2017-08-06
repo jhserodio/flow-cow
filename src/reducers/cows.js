@@ -9,7 +9,7 @@ const cows = (state = initialState, action) => {
       return cows;
     case REMOVE_COW:
       return state.filter(
-        item => item.id !== action.id
+        item => item.id !== action.cowId
       );
     default:
       return state

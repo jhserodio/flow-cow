@@ -94,6 +94,8 @@ select:focus {
 }
 
 .btn-add-cow:hover::before,
-.btn-add-cow:hover::after {
+.btn-add-cow:hover::after,
+.btn-add-cow:focus::before,
+.btn-add-cow:focus::after {
     transform: translateX(0);
 }
