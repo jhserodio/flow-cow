@@ -1,0 +1,62 @@
+.list {
+    --button: 60px; 
+    display: flex;
+    flex-direction: column;
+    width: var(--column);
+}
+
+.list ._item {
+    width: 100%;
+    box-sizing: border-box;
+    margin: var(--space-base) 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--small);
+    color: white;
+    background: var(--third);
+}
+
+.list ._item ._content {
+    display: grid;
+    box-sizing: border-box;
+    padding: var(--space-base);
+    width: calc(100% - var(--button));
+    grid-template-columns: 40% 30% 30%;
+}
+
+.list button {
+    width: var(--button);
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+
+.list button svg {
+    fill: var(--second);
+    width: 24px;
+    height: 24px;
+    transition: all .2s ease;
+}
+
+.list button:hover svg {
+    fill: var(--fourt);
+}
+
+
+.list button:focus {
+    outline: 0;
+}
+
+.list strong {
+    margin-right: var(--space-base);
+}
+
+@media screen and (max-width: 600px) {
+    .list ._item ._content {
+        grid-template-columns: 100%;
+    }
+
+}

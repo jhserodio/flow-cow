@@ -11,7 +11,6 @@ const cows = (state = initialState, action) => {
       return state.filter(
         item => item.id !== action.id
       );
-      return cows;
     default:
       return state
   }

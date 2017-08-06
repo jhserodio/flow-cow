@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FormContainer from '../Form/FormContainer';
+import ListContainer from '../List/ListContainer';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './App.css';
@@ -11,9 +12,7 @@ class App extends Component {
         <Header className="_header"/>
         <div className="_content">
           <FormContainer />
-          <div>
-            list
-          </div>
+          <ListContainer />
         </div>
         <Footer  className="_footer" />
       </div>

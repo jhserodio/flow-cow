@@ -1,9 +1,9 @@
-import React, { Components } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { addCow } from '../../actions/cows';
 import Form from './Form';
 
-const FormContainer = props => <Form cow={props.cow} />;
+const FormContainer = props => <Form />;
 
 const mapDispatchToProps = dispatch => ({
     addCow: cow => {

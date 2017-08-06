@@ -1,6 +1,6 @@
 .form {
     display: block;
-    width: calc(50% - var(--space-large));
+    width: var(--column);
 }
 
 ._control {
@@ -21,6 +21,7 @@ option {
     color: var(--dark);
     height: var(--input-height);
     padding-left: var(--space-base);
+    padding-top: 10px;
     background: white;
     box-sizing: border-box; 
     border-bottom: 1px solid var(--light);
@@ -33,10 +34,10 @@ input:focus,
 input:hover,
 select:focus,
 select:hover {
-    border: 4px solid red;
     outline: 0;
     box-shadow: 0;
     border: 0;
+    color: var(--third);
     border-bottom: 1px solid var(--third);
 }
 
@@ -45,8 +46,9 @@ select:focus {
     border-left: 5px solid var(--third);
 }
 
-button {
+.btn-add-cow {
     border: none;
+    border-radius: 3px;
     height: var(--input-height);
     cursor: pointer;
     background: var(--third);
@@ -59,12 +61,13 @@ button {
     overflow: hidden;
 }
 
-button:hover {
-    box-shadow: 0 0 2px 1px var(--grey);   
+.btn-add-cow:hover {
+    box-shadow: var(--shadow);   
 }
 
-button::before {
+.btn-add-cow::before {
     content: '';
+    border-radius: 3px;    
     width: 100%;
     height: 100%;
     transform: translateX(-100%);
@@ -76,7 +79,7 @@ button::before {
     transition: all .1s ease;
 }
 
-button::after {
+.btn-add-cow::after {
     content: 'cow saved';
     width: 100%;
     height: 100%;
@@ -90,7 +93,7 @@ button::after {
     transition: all .1s ease;
 }
 
-button:hover::before,
-button:hover::after {
+.btn-add-cow:hover::before,
+.btn-add-cow:hover::after {
     transform: translateX(0);
 }

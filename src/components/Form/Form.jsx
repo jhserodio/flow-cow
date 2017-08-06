@@ -33,7 +33,7 @@ const Form = props =>
         </div>
 
         <div className="_control">
-            <button>save the cow</button>
+            <button className="btn-add-cow">save the cow</button>
         </div>
 </div>
 
