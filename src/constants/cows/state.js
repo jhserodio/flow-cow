@@ -1,10 +1,10 @@
 const initialState = [
     {
-        name: null,
-        born: null,
-        weight: null,
-        sex: null,
-        race: null
+        name: 'Cool Cow',
+        born: 1874,
+        weight: 10000,
+        sex: 'female',
+        race: 'angus'
     }
 ];
 

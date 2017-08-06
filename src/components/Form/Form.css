@@ -59,6 +59,10 @@ button {
     overflow: hidden;
 }
 
+button:hover {
+    box-shadow: 0 0 2px 1px var(--grey);   
+}
+
 button::before {
     content: '';
     width: 100%;
