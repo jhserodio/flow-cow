@@ -1,4 +1,7 @@
 import React from 'react';
+
+import './Form.css';
+
 const
     male = 'male',
     female = 'female';  
@@ -27,6 +30,10 @@ const Form = props =>
                 <option value={male}>male</option>
                 <option value={female}>female</option>
             </select>
+        </div>
+
+        <div className="_control">
+            <button>save the cow</button>
         </div>
 </div>
 

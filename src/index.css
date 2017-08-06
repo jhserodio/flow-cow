@@ -3,6 +3,7 @@
 :root {
   --template-height: 60px;
   --content-height: calc(100vh - (var(--template-height) * 2));
+  --input-height: 35px;
   /* measures */
   --space-base: 8px;
   --space-large: 25px;
@@ -12,10 +13,13 @@
   --second: #ffc952;
   --third: #47b8e0;
   --fourt: #34314c;
-  
+  --grey: #8989a9;
+  --dark: #565675;
+  --light: #bebeee;
+  /* typography */
   --text: 18px;
   --head: 32px;
-  --span: 16px
+  --small: 14px;
 }
 
 body {
