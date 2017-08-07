@@ -21,7 +21,7 @@ class FormContainer extends Component {
     saveTheCow = () => {
         const { name, born, weight, sex, race } = this.state;
         if (name && born && weight && sex && race) {
-            this.props.addCow(this.state)
+            this.props.addCow({id: Math.random(), ...this.state})
         } else {
             alert('tem coisa faltando');
         }
