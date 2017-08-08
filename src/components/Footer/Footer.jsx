@@ -1,7 +1,12 @@
+// @flow
 import React from 'react';
 import './Footer.css';
 
-const Footer = ({ className }) =>
+type Props = {
+    className: string
+}
+
+const Footer = ({ className }: Props) =>
     <div className={`${className} cowFooter`}>
         <div>
             <svg className="flow-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-120 0 498.39 252.33">

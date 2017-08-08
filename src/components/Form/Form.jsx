@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 import { male, female } from '../../constants/sex.const';
-import { type cowState } from '../../constants/cows/state';
+import { type cowState } from '../../constants/cowState';
 import './Form.css';
 
 type Props = {
     ...cowState,
-    changeState: Function,
+    changeState: (e: SyntheticInputEvent, state: string) => void,
     save: Function,
 };
 

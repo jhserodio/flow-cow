@@ -1,9 +1,23 @@
 // @flow
-import { ADD_COW, REMOVE_COW } from '../constants/cows/types';
-import { type cowState } from '../constants/cows/state';
+import { type cowState } from '../constants/cowState';
 
-export const addCow = (cow: cowState) =>
-    ({ type: ADD_COW, cow });
+type AddCow = {
+  +type: 'ADD_COW',
+  +cow: cowState,
+};
 
-export const removeCow = (cowId: number) =>
-    ({ type: REMOVE_COW, cowId });
+export const addCow = (cow: cowState): AddCow =>
+    ({ type: 'ADD_COW', cow });
+
+
+type RemoveCow = {
+  +type: 'REMOVE_COW',
+  +id: number,
+};
+
+export const removeCow = (id: number): RemoveCow =>
+    ({ type: 'REMOVE_COW', id });
+
+export type CowAction =
+  | RemoveCow
+  | AddCow

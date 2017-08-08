@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import './List.css';
-import { type cowState } from '../../constants/cows/state';
+import { type cowState } from '../../constants/cowState';
 
 type Props = {
     cows: Array<cowState>,

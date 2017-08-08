@@ -1,5 +1,5 @@
 // @flow
-import { male, female } from '../sex.const';
+import { male, female } from './sex.const';
 
 export type cowState = {
     id?: number,
