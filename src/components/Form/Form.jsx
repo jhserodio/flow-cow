@@ -1,12 +1,16 @@
+// @flow
 import React from 'react';
-
+import { male, female } from '../../constants/sex.const';
+import { type cowState } from '../../constants/cows/state';
 import './Form.css';
 
-const
-    male = 'male',
-    female = 'female';  
+type Props = {
+    ...cowState,
+    changeState: Function,
+    save: Function,
+};
 
-const Form = props =>
+const Form = (props: Props) =>
     <div className="form">
         <div className="_control">
             <label htmlFor="name">name: </label>
@@ -14,8 +18,8 @@ const Form = props =>
                 type="text"
                 name="name"
                 value={props.name}
-                onChange={e => props.changeState(e, 'name')}
-                />
+                onChange={(e: SyntheticInputEvent) => props.changeState(e, 'name')}
+            />
         </div>
         <div className="_control">
             <label htmlFor="born">born age: </label>
@@ -24,16 +28,16 @@ const Form = props =>
                 name="born"
                 value={props.born}
                 onChange={e => props.changeState(e, 'born')}
-                />
+            />
         </div>
         <div className="_control">
-            <label htmlFor="race">race: </label>
+            <label htmlFor="breed">breed: </label>
             <input
                 type="text"
-                name="race"
-                value={props.race}
-                onChange={e => props.changeState(e, 'race')}
-                />
+                name="breed"
+                value={props.breed}
+                onChange={e => props.changeState(e, 'breed')}
+            />
         </div>
         <div className="_control">
             <label htmlFor="weight">weight: </label>
@@ -42,7 +46,7 @@ const Form = props =>
                 name="weight"
                 value={props.weight}
                 onChange={e => props.changeState(e, 'weight')}
-                />
+            />
         </div>
         <div className="_control">
             <label htmlFor="sex">sex: </label>
@@ -59,7 +63,7 @@ const Form = props =>
         <div className="_control">
             <button className="btn-add-cow" onClick={props.save}>save the cow</button>
         </div>
-</div>
+    </div>
 
 
 export default Form;

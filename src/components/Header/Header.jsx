@@ -1,8 +1,9 @@
+// @flow
 import React from 'react';
 import './Header.css';
 
-const Header = ({className}) =>
-    <div className={`${className} cowHeader`}>
+const Header = (props: { className: string }) =>
+    <div className={`${props.className} cowHeader`}>
         <svg id="icon-cow" viewBox="0 0 32 32">
             <path d="M12.807 12.966c-0.694 0-1.259 0.571-1.259 1.275s0.565 1.276 1.259 1.276c0.695 0 1.26-0.571 1.26-1.276s-0.565-1.275-1.26-1.275z"></path>
             <path d="M19.183 12.956c-0.701 0-1.269 0.575-1.269 1.285s0.568 1.285 1.269 1.285c0.7 0 1.268-0.575 1.268-1.285s-0.568-1.285-1.268-1.285z"></path>

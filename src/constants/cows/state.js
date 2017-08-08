@@ -1,11 +1,23 @@
-const initialState = [
+// @flow
+import { male, female } from '../sex.const';
+
+export type cowState = {
+    id?: number,
+    name: ?string,
+    born: ?number,
+    weight: ?number,
+    sex: ?(typeof male | typeof female),
+    breed: ?string
+};
+
+const initialState: Array<cowState> = [
     {
         id: 1,
         name: 'Cool Cow',
         born: 1874,
         weight: 10000,
         sex: 'female',
-        race: 'angus'
+        breed: 'angus'
     },
     {
         id: 2,
@@ -13,7 +25,7 @@ const initialState = [
         born: 1200,
         weight: 7000,
         sex: 'male',
-        race: 'black angus'
+        breed: 'black angus'
     }
 ];
 

@@ -1,8 +1,14 @@
+// @flow
 import React from 'react';
 import './List.css';
+import { type cowState } from '../../constants/cows/state';
 
+type Props = {
+    cows: Array<cowState>,
+    remove: Function,
+};
 
-const List = ({ cows, remove }) =>
+const List = ({ cows, remove }: Props) =>
     <div className="list">
         {cows ? cows.map(cow => (
             <div className="_item" key={cow.id}>
@@ -10,7 +16,7 @@ const List = ({ cows, remove }) =>
                     <div><strong>Name:</strong><span>{cow.name}</span></div>
                     <div><strong>Born:</strong><span>{cow.born}</span></div>
                     <div><strong>Weight:</strong><span>{cow.weight}</span></div>
-                    <div><strong>Race:</strong><span>{cow.race}</span></div>
+                    <div><strong>Breed:</strong><span>{cow.breed}</span></div>
                     <div><strong>Sex:</strong><span>{cow.sex}</span></div>
                 </div>
                 <button onClick={() => remove(cow.id)}>

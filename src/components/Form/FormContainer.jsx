@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCow } from '../../actions/cows';
@@ -10,7 +11,7 @@ class FormContainer extends Component {
         born: undefined,
         weight: undefined,
         sex: undefined,
-        race: undefined
+        breed: undefined
     }
 
     handleChangeState = (e, state) =>
@@ -19,9 +20,9 @@ class FormContainer extends Component {
         })
 
     saveTheCow = () => {
-        const { name, born, weight, sex, race } = this.state;
-        if (name && born && weight && sex && race) {
-            this.props.addCow({id: Math.random(), ...this.state})
+        const { name, born, weight, sex, breed } = this.state;
+        if (name && born && weight && sex && breed) {
+            this.props.addCow({ id: Math.random(), ...this.state })
         } else {
             alert('tem coisa faltando');
         }
@@ -33,7 +34,7 @@ class FormContainer extends Component {
                 {...this.state}
                 changeState={this.handleChangeState}
                 save={this.saveTheCow}
-                />
+            />
         )
     }
 }
